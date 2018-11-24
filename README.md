@@ -21,3 +21,12 @@ Open Maya and find the Mel and Python Editor. Click on the icon in bottom-right 
 If you don‘t see it? – Then got to ***WINDOWS -> GENERAL EDITORS -> SCRIPT EDITOR***
 
 ![](assets/Editor.png)
+
+## Step One – Monitoring the Command History
+
+This History will be your best friend! Amazingly Maya is printing here almost all actions that you perform in the UI. So you create a cube just by using the normal UI and the history will show you the MEL command for the used action. In addition the Command History displays any feedback such as results, warnings, or errors returned by Maya.
+
+
+![](assets/History.png)
+
+
