@@ -18,7 +18,7 @@ Open Maya and find the Mel and Python Editor. Click on the icon in bottom-right 
 
 ![](assets/Editor_icon.png)
 
-If you don‘t see it? – Then got to ***WINDOWS -> GENERAL EDITORS -> SCRIPT EDITOR***
+If you don‘t see it? – Then got to ```WINDOWS → GENERAL EDITORS → SCRIPT EDITOR```
 
 ![](assets/Editor.png)
 
@@ -39,7 +39,10 @@ Now you can start creating something new by copy and paste commands to create yo
 
 ## Step Three – Memorize documentation
 
-o look up the different commands you can find these in the Help Documentation, hot-key F1.
+To look up the different commands you can find these in the Help Documentation, → hot-key F1.
+
+**[→ Download Slides](http://download.autodesk.com/us/maya/2011help/Commands/)**
+
 
 ## Step Four – Saving your mind blowing Snippets
 
