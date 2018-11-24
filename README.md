@@ -43,24 +43,24 @@ o look up the different commands you can find these in the Help Documentation, h
 
 ## Step Four – Saving your mind blowing Snippets
 
-Once you have put together a script, you can drag it into the shelf inside the Maya UI to save it for later and re-use it over and over. 
-1. To complete this highlight your new script:
-2. Press the 'Alt' key while dragging your highlighted script into the Shelf tab of your choice, you are then prompted with whether the code is MEL or Python:
-3. Windows->UI Elements->Shelf
+Once you have put together a script, you can drag it into the shelf inside the Maya UI to save it for later and re-use it over and over. Highlight, Press 'Alt' and drag the script into the Shelf tab of your choice (If u closed ur Shelf tab) Windows->UI Elements->Shelf
 
-Or Just add -> scriptToShelf  ("Mylabel", "select -all", true); <- at the end of your script and run it.
+![Script into Shelf](assets/intoshelf.gif)
 
+
+***Or*** Just add a line of code into your Script – ```scriptToShelf  ("MyFirst", "select -all", true);```
+
+```
 file -f -new;
-
 polySphere -ch on -o on -r 7;
 nurbsCube -p 0 0 0;
 polySphere -ch on -o on -r 2.5;
 
 select -r pSphere1 nurbsCube1 pSphere2;
-
 group;
 
 scriptToShelf  ("MyFirst", "select -all", true);
+```
 
 
 
