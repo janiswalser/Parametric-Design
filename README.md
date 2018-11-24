@@ -1,7 +1,7 @@
 ![](assets/cover.png)
 
 # Parametric-Design
-Code-basics scipted in MEL & PYTHON in the Autodesk Maya environment.
+Code-basics scipted in MEL & PYTHON in the [Autodesk Maya](https://en.wikipedia.org/wiki/Autodesk_Maya) environment.
 
 Are you ever curious to dive into programming in Maya? Are looking to take your work to the next level and challenge yourself and explore new opportunities by explorations in creativity through the practice of programming? – then start with generative design in Maya
 
