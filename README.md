@@ -33,8 +33,7 @@ This History will be your best friend! Amazingly Maya is printing here almost al
 
 Now you can start creating something new by copy and paste commands to create your own worklfow. Just copy from the History panel the commands you need and paste in the Editor panel to piece together your custom automation work flow.
 
-<img align="center">
-  
-![hello](https://camo.githubusercontent.com/d990f75ee78efb887d9c833b77493cf44606a018/68747470733a2f2f6d656469612e67697068792e636f6d2f6d656469612f78484d4944417931716b7a4e532f67697068792e676966)
-  
-</img>
+
+
+<img align="right" width="100" height="100" src="https://camo.githubusercontent.com/d990f75ee78efb887d9c833b77493cf44606a018/68747470733a2f2f6d656469612e67697068792e636f6d2f6d656469612f78484d4944417931716b7a4e532f67697068792e676966">
+
