@@ -29,4 +29,8 @@ This History will be your best friend! Amazingly Maya is printing here almost al
 
 ![](assets/History.png)
 
+## Step Two – Copy & paste
 
+Now you can start creating something new by copy and paste commands to create your own worklfow. Just copy from the History panel the commands you need and paste in the Editor panel to piece together your custom automation work flow.
+
+![](https://giphy.com/gifs/bublywater-perfect-done-9Jcw5pUQlgQLe5NonJ)
