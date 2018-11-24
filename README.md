@@ -37,5 +37,33 @@ Now you can start creating something new by copy and paste commands to create yo
   <img width="460"  src="https://camo.githubusercontent.com/d990f75ee78efb887d9c833b77493cf44606a018/68747470733a2f2f6d656469612e67697068792e636f6d2f6d656469612f78484d4944417931716b7a4e532f67697068792e676966">
 </p>
 
+## Step Three – Memorize documentation
+
+o look up the different commands you can find these in the Help Documentation, hot-key F1.
+
+## Step Four – Saving your mind blowing Snippets
+
+Once you have put together a script, you can drag it into the shelf inside the Maya UI to save it for later and re-use it over and over. 
+1. To complete this highlight your new script:
+2. Press the 'Alt' key while dragging your highlighted script into the Shelf tab of your choice, you are then prompted with whether the code is MEL or Python:
+3. Windows->UI Elements->Shelf
+
+Or Just add -> scriptToShelf  ("Mylabel", "select -all", true); <- at the end of your script and run it.
+
+file -f -new;
+
+polySphere -ch on -o on -r 7;
+nurbsCube -p 0 0 0;
+polySphere -ch on -o on -r 2.5;
+
+select -r pSphere1 nurbsCube1 pSphere2;
+
+group;
+
+scriptToShelf  ("MyFirst", "select -all", true);
+
+
+
+
 
 
