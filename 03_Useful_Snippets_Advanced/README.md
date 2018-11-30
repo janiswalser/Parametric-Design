@@ -1,15 +1,69 @@
-{\rtf1\ansi\ansicpg1252\cocoartf1561\cocoasubrtf200
-{\fonttbl\f0\fswiss\fcharset0 Helvetica;}
-{\colortbl;\red255\green255\blue255;}
-{\*\expandedcolortbl;;}
-\paperw11900\paperh16840\margl1440\margr1440\vieww10800\viewh8400\viewkind0
-\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
 
-\f0\fs24 \cf0 \
-RUN IN TERMINAL TO GET FILENAME ARRAY\
-\
-// Wenn deine Daten auf dem Desktop liegt (cd = change directory)\
-cd Dektop \
-\
-// Run the script (python + name.py)\
-python filename.py}
+# Useful Snippets 2.0
+
+
+## Number Patterns
+
+Examples
+```
+for($i=0; $i<20; $i++){
+$x = $i/2;
+polyCube;
+move ($i*2) 0 0;
+scale 1 $x 1;
+};
+//00112233445566778899
+```
+
+```
+for($i=0; $i<20; $i++){
+$x = ($i%4)/3;
+polyCube;
+move $i 0 0;
+scale 1 $x 1;
+};
+//00010001000100010010
+```
+
+```
+for($i=0; $i<20; $i++){
+$x = $i%2;
+polyCube;
+move $i 0 0;
+scale 1 $x 1;
+};
+//00110011001100110011
+```
+![num pattern](assets/num_pattern.png)
+
+## Something
+
+```
+int $k = 1;
+for ($x=0; $x<10; $x++) {
+	for ($y=0; $y<10; $y++){ 
+		$name = "MyCube" + $k;
+		polyCube -name $name;
+		move ($x*2) ($y*2) 0;
+		eval("select -r MyCube"+$k+".e[6]") ;
+		float $xoff = rand(-.2, .2);
+		float $yoff = rand(-.2, .2);
+		move -r $xoff $yoff 0;
+		eval("select -r MyCube"+$k+".e[7]") ;
+		float $xoff = rand(-.2, .2);
+		float $yoff = rand(-.2, .2);
+		move -r $xoff $yoff 0;
+		eval("select -r MyCube"+$k+".e[10]") ;
+		float $xoff = rand(-.2, .2);
+		float $yoff = rand(-.2, .2);
+		move -r $xoff $yoff 0;
+		eval("select -r MyCube"+$k+".e[11]") ;
+		float $xoff = rand(-.2, .2);
+		float $yoff = rand(-.2, .2);
+		move -r $xoff $yoff 0;
+		$k++;
+	}
+}
+```
+
+![sth](assets/something.png)
