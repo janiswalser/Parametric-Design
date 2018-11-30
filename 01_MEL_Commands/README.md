@@ -54,3 +54,52 @@ polyCylinder -sx 10 -sy 15 -sz 5 -h 20;
 ![Loop](assets/Loop.png)
 
 
+# Transform objects
+
+## Move
+
+Flags
+-a (=absolute [default])
+-r (=relative)
+-x (=x direction)
+-y (=y direction)
+-z (=z direction)
+-xyz (all directions [default])
+
+Example
+```
+move –r –x 10.;
+// move relative from its previous position 10 in x
+```
+
+## Rotate
+
+Flags
+-a (= absolute operation)
+-r (= relative to the object's current position
+-cp (= pivot be the center of the bounding box of all objects
+-ocp (=pivot be the center of the bounding box of each object
+-p (= Define the pivot point for the transformation)
+
+Example
+```
+polyCube –n "MyCube";
+rotate -pivot 1 0 0 0 180deg 0 cube1;
+// rotate the cube 180 degrees about its local space Y axis
+// centered at the rotate pivot point 1 0 0.
+```
+
+## Scale
+
+Flags
+-a (=absolute [default])
+-r (=relative)
+-cp (= pivot be the center of the bounding box of all objects
+-ocp (=pivot be the center of the bounding box of each object
+-p (= Define the pivot point for the transformation)
+
+Example
+```
+sphere;
+scale -p 1 0 0 3 3 3; //triple the size about p(1,0,0)
+```
