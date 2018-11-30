@@ -115,13 +115,22 @@ sphere;
 scale -p 1 0 0 3 3 3; //triple the size about p(1,0,0)
 ```
 
+
+![Transform](assets/transform.gif)
+
+
 ## Example
+
 ```
-for ($i=0; $i<10; $i++){
-  polyCube -w 0.5 -h 0.5 -d 4; // create a polyCube
+for ($i=0; $i<20; $i++){
+  polyCube -w 0.2 -h 0.2 -d 4; // create a polyCube
   
-  move (2*$i) 0 0; // move it 
+  move ($i) 0 0; // move it 
+  
   float $factor = $i/9.; // make a variable factor to be between 0.1 and 1
   scale -ocp 1 1 $factor; // scale in the z direction
+  
+
+  rotate ($i*10) 0 0;  
 };
 ```
