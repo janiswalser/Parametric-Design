@@ -17,7 +17,22 @@ Lets put this snippets alwas on top of every other line of code!
 select -all;
 delete;
 ```
+## Get Attributes
+Returns the value of an attribute.
+Example:
+```
+polyCube -name "MyCube";
+getAttr MyCube.translateX; // Result is 0
+```
 
+## Set Attributes
+Changes the value of an attribute.
+Example:
+```
+polyCube -name "MyCube";
+setAttr MyCube.translateX 4;
+eval("setAttr MyCube.translateX 30");
+```
 
 ## Eval
 This statement is designed to allow execution of a command which is not known until
