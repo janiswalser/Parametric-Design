@@ -114,3 +114,14 @@ Example
 sphere;
 scale -p 1 0 0 3 3 3; //triple the size about p(1,0,0)
 ```
+
+## Example
+```
+for ($i=0; $i<10; $i++){
+  polyCube -w 0.5 -h 0.5 -d 4; // create a polyCube
+  
+  move (2*$i) 0 0; // move it 
+  float $factor = $i/9.; // make a variable factor to be between 0.1 and 1
+  scale -ocp 1 1 $factor; // scale in the z direction
+};
+```
