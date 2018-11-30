@@ -217,3 +217,4 @@ $p = eval("pointPosition MyCube.vtx[3]"); //put in a variable $p
 print($p[0]); //get the first element (i.e. x-coord)
 setAttr MyCube.vtx[3] .2 .4 0;
 ```
+![vtx](assets/vtx.png)
