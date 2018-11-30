@@ -67,3 +67,32 @@ for ($x=0; $x<10; $x++) {
 ```
 
 ![sth](assets/something.png)
+
+
+## Set Attributes example
+```
+// setting a value from a set of objects
+for($i=0; $i<10; $i++){
+	string $s = "MyCube" + $i;
+	polyCube -name $s;
+	move ($i*2) 0 0 ;
+}
+setAttr MyCube3.translateZ 4;
+
+int $indx = 3;
+eval("setAttr MyCube" + $indx + ".translateZ 7");
+```
+
+## Get Attributes example
+```
+// getting a value from a set of objects
+for($i=0; $i<10; $i++){
+	string $s = "MyCube" + $i;
+	polyCube -name $s;
+	move ($i*2) 0 0 ;
+}
+
+int $indx = rand(9);
+
+eval("getAttr MyCube" + $indx + ".translateX");
+```
