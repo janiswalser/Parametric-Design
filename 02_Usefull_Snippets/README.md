@@ -17,6 +17,15 @@ Lets put this snippets alwas on top of every other line of code!
 select -all;
 delete;
 ```
+
+## Math functions
+
+```$c = sqrt(4);``` // Result 2
+```$c = pow(2,3);``` //Result 8
+```$c = abs(-5.2);``` // Result 5.2
+```$c = max(3,7);``` // Result 7
+```$c = min(3,7);``` // Result 3
+
 ## Get Attributes
 Returns the value of an attribute.
 Example:
