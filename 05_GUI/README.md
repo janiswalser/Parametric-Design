@@ -104,3 +104,42 @@ connectControl $sliderY pCube1.ty pSphere1.ty;
 connectControl $sliderZ pCube1.tz pSphere1.tz;
 ```
 
+
+# GUI - More functions Window
+
+
+![more](assets/more.png)
+
+```
+{
+    string $sphereNames[] = `sphere`;
+    string $sphereName = $sphereNames[0];
+    string $window = `window`;
+    columnLayout;
+    text -l "X Value:";
+    floatField xx;
+    connectControl xx ($sphereName+".tx");
+    text -l "Visibility";
+    checkBox vis;
+    connectControl vis ($sphereName+".visibility");
+    floatFieldGrp -l "Rotation:" -numberOfFields 3 rot;
+    // index 1 would be the text label
+    connectControl -index 2 rot ($sphereName+".rx");
+    connectControl -index 3 rot ($sphereName+".ry");
+    connectControl -index 4 rot ($sphereName+".rz");
+    showWindow $window;
+}
+
+// Connecting two attributes to a single control
+{
+    window;
+    columnLayout;
+    floatSlider slider;
+    showWindow;
+
+    polySphere;
+    polyCube;
+    move 0 2 0;
+    connectControl slider pCube1.tx pSphere1.tx;
+}
+```
