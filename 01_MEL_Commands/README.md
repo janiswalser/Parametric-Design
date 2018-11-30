@@ -75,7 +75,7 @@ move –r –x 10.;
 ## Rotate
 
 Flags
--a (= absolute operation)
+-a (= absolute operation) /n | \n
 -r (= relative to the object's current position
 -cp (= pivot be the center of the bounding box of all objects
 -ocp (=pivot be the center of the bounding box of each object
