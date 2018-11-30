@@ -30,7 +30,7 @@ Add $y → sin( deg_to_rad( $x + $y )
 
 # Sin & Cos = Circle
 
-![](assets/circles.png)
+![](assets/circle.png)
 ```
 for ($i = 0; $i < 100; $i++ ) {
   // Sin X
