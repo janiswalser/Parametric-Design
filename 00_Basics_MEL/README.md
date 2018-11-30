@@ -41,4 +41,7 @@ if($a<$b) // if a is less than b
 if($a<=$b)
 ```
 
+
+### Loops
+
 ![Loop](assets/Loop.png)
