@@ -41,6 +41,7 @@ if($a<$b) // if a is less than b
 if($a<=$b)
 ```
 
+## Repetition
 
 ### Loops
 A loop is a repetition statement. → for( start; end; step ) {do something;}
@@ -59,4 +60,20 @@ for($i=0; $i<20; $i++){
   if($i > 7) break;
   print $i;
 }
+```
+
+### While loops
+
+→ while (end condition) { do something; }
+
+```
+$count = 0;
+
+while( $count < 7 ){
+  print($count + "\n");
+  $count++;
+}
+
+print($count);
+
 ```
