@@ -1,63 +1,56 @@
-# Variables & simple Logic
+# Create Objects
 
-## Variables
+MEL provide for modeling objects a lot of different attributes. Mostly the Syntax of the attribute commands can be written as Long name (-radius) or short name/flag (-r) and the value you choose.	
 
-1.) Numbers
+## Basic Models (Nurbs)
+
+### Sphere
 ```
-int $numCubes = 25; 
-float $pi = 3.14;
-```
+// Create sphere with radius 10
+sphere -r 10;
 
-2.) Strings
-```string $myName = "Tony";```
-
-3.) Vector
-```vector $origin = <<0,0,0>>;```
-
-4.) Array
-```int $int_array[] = {10,9,8,7,6,5,4,3,2,1,0};```
-
-![Variables](assets/Variables.png)
-
-## Logic
-
-### If Conditions
-
-if ( condition ) {
-  do something
-}
-else {
-  do something
-}
-
-![If](assets/If.png)
-
-### Operators 
-```
-if($a==$b) // if a is equal to b
-if($a>b$) // if a is greater than to b
-if($a>=$b) // if a is greater than or equal to b
-if($a<$b) // if a is less than b
-if($a<=$b)
+// Create half sphere
+sphere -ssw 0 -esw 180
 ```
 
-## Repetition
+### Cylinder
+```
+cylinder; // create one with default attributes 
+cylinder -r 5 -axis 1 1 1 -pivot 0 0 1 -ssw 0deg -esw 90deg; // create one with your own settings
+```
 
-### Loops
-A loop is a repetition statement. → for( start; end; step ) {do something;}
+### Cone
+```
+cone; // create one with default attributes 
+cone -ch true -radius 10 -hr 3; // create one with your own settings
+```
+
+## Basic Models (Polygons)
+
+### polyCube
+Flags:
+-w (=width)
+-h (=height)
+-d (=depth)
+-n (=name)
+
+```
+// 10 units height rectangular box called MyCube
+polyCube -w 5 -h 10 -d 5 –n "MyCube";
+```
+
+### polySphere
+This command creates a sphere, with 10 subdivisions in the X direction, and 15 subdivisions in the Y direction. 
+```
+polySphere -sx 10 -sy 15 -r 20;
+```
+
+### polyCylinder
+hint → -subdivisionsX(-sx), -subdivisionsY(-sy), -subdivisionsZ(-sz) 
+```
+polyCylinder -sx 10 -sy 15 -sz 5 -h 20;
+```
 
 ![Loop](assets/Loop.png)
 
-<b>Example</b>
 
-break; = exit the loop
-
-continue; = skip one iteration
-
-```
-for($i=0; $i<20; $i++){ 
-  if($i == 3) continue;
-  if($i > 7) break;
-  print $i;
-}
-```
