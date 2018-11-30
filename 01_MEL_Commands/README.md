@@ -35,8 +35,8 @@ Flags:
 -n (=name)
 
 ```
-// 10 units height rectangular box called MyCube
-polyCube -w 5 -h 10 -d 5 –n "MyCube";
+// 20 units height rectangular box called MyCube
+polyCube -sx 10 -sy 15 -sz 5 -h 20 -n "myCube";
 ```
 
 ### polySphere
@@ -51,7 +51,8 @@ hint → -subdivisionsX(-sx), -subdivisionsY(-sy), -subdivisionsZ(-sz)
 polyCylinder -sx 10 -sy 15 -sz 5 -h 20;
 ```
 
-![Loop](assets/Loop.png)
+
+
 
 
 # Transform objects
