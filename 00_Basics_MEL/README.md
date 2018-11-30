@@ -43,5 +43,17 @@ if($a<=$b)
 
 
 ### Loops
+A loop is a repetition statement. -> for( start; end; step ) {do something;}
 
 ![Loop](assets/Loop.png)
+
+<b>Example</b>
+break; = exit the loop
+continue; = skip one iteration
+```
+for($i=0; $i<20; $i++){ 
+  if($i == 3) continue;
+  if($i > 7) break;
+  print $i;
+}
+```
