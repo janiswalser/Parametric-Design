@@ -69,7 +69,17 @@ Just add the elemnts you want to group!
 group -name MyGroup pCube1 pCube2 pCube3 pCube4 pCube5 pCube6;
 ```
 
-## Functions/Proc‘s
+Create 20 Cubes and add them to a group.
+```
+string $s = "";
+
+for($i=1; $i<=20; $i++){
+	$s = $s + " pCube" + $i;
+};
+eval( "group -name MyGroup " + $s);
+```
+
+## Functions/Procedures
 ```
 string $some_text="hello world";
 eval( "MyFunction($some_text);" );
