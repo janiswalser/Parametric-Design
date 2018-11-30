@@ -11,8 +11,104 @@ First of all, while I was running and executing scripts in MEL I felt crazy beca
 
 Lets put this snippets alwas on top of every other line of code!
 
+## Select & Delete
+
 ```
 select -all;
 delete;
+```
+
+
+## Eval
+This statement is designed to allow execution of a command which is not known until
+runtime. It requires at least one argument, the first, which is the command to be executed.
+```
+print(5); //will print 5
+eval(" print(5); "); //will execute the command “print 5”
+```
+
+ other example:
+```
+$command = "polyCube";
+eval($command);
+```
+
+## Naming
+Name each object you create so that you can call it up again later.
+```
+$command = "polyCube";
+$name = "MyCube";
+eval($command + " -name " + $name);
+```
+
+
+## String Substring
+You need just a part of your String – Lets cut it!
+```
+$s = "Apple";
+print (substring($s,2,4)) //pple
+
+```
+
+
+## String Compare
+Compares its 2 string arguments and returns an integer less than, equal to, or greater than 0, based upon whether the first argument is lexicographically less than, equal to, or greater than the second argument.
+
+```
+  $s1 = "Apple";
+  $s2 = "Bannan";
+  
+  print (strcmp($s1 , $s2))
+
+```
+
+## Groups
+Just add the elemnts you want to group!
+
+```
+group -name MyGroup pCube1 pCube2 pCube3 pCube4 pCube5 pCube6;
+```
+
+## Functions/Proc‘s
+```
+string $some_text="hello world";
+eval( "MyFunction($some_text);" );
+
+proc MyFunction(string $text) {
+        print($text);
+}
+```
+
+## Listing Scene Nodes
+Within mel we can use the mel function ls to list objects in the maya scene. You may well be suprised by how many there are just in a new scene file!
+
+```
+// the nodes in the scene
+$nodes = `ls`;
+
+// loop through the array and print each value [for in loop notes]
+for( $node in $nodes ) {
+    //print the node name
+    print( $node + "\n" );
+}
+```
+
+## Use Arrays
+```
+		int $int_array[] = {10,9,8,7,6,5,4,3,2,1,0};
+		
+		// number of elements
+		int $size = size($int_array);
+		
+		// loop through the array and print each value 
+		for($i=0;$i<$size;++$i) {
+		
+			// access the value by providing an index into
+			// the array, where the first index is 0. 
+			$value = $int_array[ $i ];
+		
+			// print the value
+			print( $value + "\n" );
+		}
 ```
 
