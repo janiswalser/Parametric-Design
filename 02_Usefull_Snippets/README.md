@@ -137,3 +137,83 @@ for( $node in $nodes ) {
 		}
 ```
 
+## 2D Grid
+```
+for($i=0; $i<25; $i++){
+	$x = rand(10);
+	$y = rand(10);
+	polyCube;
+	scale 0.5 0.5 0.5;
+	move
+}
+```
+
+### 2D Grid advanced 
+```
+for($j=0; $j<20; $j=$j+2){
+	for($i=0; $i<20; $i=$i+2){
+		polyCube;
+		move $i $j 0;
+		rotate 0 ($j*5) ($i*5);
+		scale 1 ($i/5.) 1;
+	}
+}
+```
+
+## 3D Grid
+```
+for($x=0; $x<10; $x++){
+	for($y=0; $y<10; $y++){
+		for($z=0; $z<10; $z++){
+			polyCube;
+			move $x $y $z;
+		}
+	}
+}
+```
+
+### 3D Grid Advanced
+```
+for($k=0; $k<20; $k=$k+2){
+	for($j=0; $j<20; $j=$j+2){
+		for($i=0; $i<20; $i=$i+2){
+			polyCube;
+			move $i $j $k;
+			rotate ($i*5) ($j*5) ($k*5);
+			scale ($i/5.) ($j/5.) ($k/5.);
+		}
+	}
+}
+```
+
+
+## Randomness
+```
+for($i=0; $i<100; $i++){
+	polyCube;
+	move (rand(-5,5)) (rand(-5,5)) 0;
+}
+
+for($i=0; $i<10; $i++){
+	$x = rand(10);
+	$y = rand(10);
+	$z = rand(10);
+	$w = rand(10);
+	$h = rand(10);
+	$d = rand(10);
+	polyCube;
+	scale $w $h $d;
+	move -r $x $y $z;
+}
+```
+
+![Random](assets/random.png)
+
+## Change the Surface
+```
+polyCube -n "MyCube";
+
+$p = eval("pointPosition MyCube.vtx[3]"); //put in a variable $p
+print($p[0]); //get the first element (i.e. x-coord)
+setAttr MyCube.vtx[3] .2 .4 0;
+```
