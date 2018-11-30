@@ -75,3 +75,32 @@ proc createWindow() {
 
 createWindow();
 ```
+
+
+# GUI – Simple Slider x,y,z
+```
+window;
+columnLayout;
+
+//Create slider
+text -l "X Value:";
+string $sliderX = `floatSlider -min 0.0 -max 20.`;
+text -l "Y Value:";
+string $sliderY = `floatSlider -min 0.0 -max 20.`;
+text -l "Z Value:";
+string $sliderZ = `floatSlider -min 0.0 -max 20.`;
+
+
+//show window
+showWindow;
+
+
+polySphere;
+polyCube;
+move 0 2 0;
+
+connectControl $sliderX pCube1.tx pSphere1.tx;
+connectControl $sliderY pCube1.ty pSphere1.ty;
+connectControl $sliderZ pCube1.tz pSphere1.tz;
+```
+
