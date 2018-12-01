@@ -38,6 +38,10 @@ for($i=0; $i<size($AllPositionAlphabet); $i++)
 ```
 
 
+
+
+
+
 # Create a Window and size cubes in relation to the input
 
 ```
@@ -108,15 +112,22 @@ global proc createCubeButtonAction() {
 }
 ```
 
-# #2Example
+
+
+
+## #2Example
 
 ![](assets/cylinder.gif)
 
-## Input
+
+### Input
 ```
 Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.
 ```
-## Replace //MAGIC part
+
+
+
+### Replace //MAGIC part
 
 ```
 // MAGIC
