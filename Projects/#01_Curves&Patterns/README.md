@@ -2,7 +2,7 @@
 
 
 # Curves & Patterns
-
+Generative created curves with ```%```
 
 ```
 $MyCurve1 = `curve -d 1 -p 0 0 0 -p 0 0 0 -name "MyCurve1" `;
@@ -74,4 +74,50 @@ for($i=-1; $i<26; $i++) {
 	curve -a -p $x $y $z MyCurve7;
 }
 ```
+# Simple Curve
+The curve command creates a new curve from a list of control vertices (CVs).
+
+-d/-degree The degree of the new curve. Default is 3.
+
+-a/-append Appends point(s) to the end of an existing curve.
+
+-p/-point dist dist dist The x, y, z position of a point.
+
+```curve –d 1 -p 0 0 0 -p 0 1 0 -p 1 1 0 -p 1 0 0 –name "MyCurve1";``` 
+
+```curve -d 2 -p 0 0 0 -p 1 0 0 -p 1 1 0 -p 0 1 0 -n “MyCurve1";``` // -d 2 → rounded curve
+
+``` 
+curve –a –p 0 0 0 MyCurve1;
+closeCurve MyCurve1;
+``` 
+→ closed curve
+
+
+# Extrude along a curve
+![extrude](assets/extrude.png)
+
+```
+$MyCurve1 = `curve -d 1 -p 0 0 0 -p 0 0 0 -name "MyCurve1" `;
+
+
+for($i=2; $i<27; $i++) {
+	//MyCurve1
+	$x = 2*(($i)/2) - 3*(($i)/6) -2;	
+	$y = 2 - (($i+3)/2)%3;
+	print $x;
+	$z = 0;
+	curve -a -p $x $y $z MyCurve1;
+}
+
+
+$circleName1 = "MyCircle1";
+circle -name $circleName1;
+scale .3 .3 .3;
+rotate 90 0 0 ;
+
+eval("extrude -rn false -po 0 -et 2 -ucp 1 -fpt 1 -upn 1 -rotation 0 -scale 1 -rsp 1 " +
+$circleName1 + " " + $MyCurve1);
+```
+
 
