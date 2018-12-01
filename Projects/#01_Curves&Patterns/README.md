@@ -1,4 +1,5 @@
-![](assets/curves.png){:height="700px" width="400px"}
+![](assets/curves.png)
+
 
 # Curves & Patterns
 
