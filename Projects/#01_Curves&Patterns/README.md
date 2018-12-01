@@ -1,4 +1,4 @@
-![](assets/curves.png | width=200)
+![](assets/curves.png =250x250)
 
 # Curves & Patterns
 
