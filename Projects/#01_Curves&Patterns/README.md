@@ -1,4 +1,4 @@
-![](assets/curves.png =250x250)
+![](assets/curves.png){:height="50%" width="50%"}
 
 # Curves & Patterns
 
