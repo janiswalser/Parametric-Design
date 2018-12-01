@@ -108,6 +108,23 @@ global proc createCubeButtonAction() {
 }
 ```
 
+# #2Example
 
+![](assets/cylinder.gif)
 
+## Input
+```
+Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.
+```
+## Replace //MAGIC part
 
+```
+// MAGIC
+for ($i = 0; $i < size($input); $i++) {
+	$size = (4 + ($AllPositionAlphabet[$i] *0.08));
+	polyCylinder -r 1 -h 0.2 -sx 20 -sy 20 -sz 20 -ax 0 1 0 -rcp 0 -cuv 3 -ch 1;
+	rotate 90 0 0;
+	move  0 0 (($i * 0.2));
+	scale $size 1 $size;
+}
+```
