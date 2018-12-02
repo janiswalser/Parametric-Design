@@ -213,3 +213,56 @@ for ($i = 0; $i < 10; $i++) {
 }
 makeIsosTriangleC();
 ```
+
+
+## Twist & open 
+Used seed() to define the seed of random. 
+
+![seed](assets/seed.png)
+
+```
+seed(1);
+
+for($i=-20; $i<20; $i=$i+2){
+    for($j=-10; $j<10; $j=$j+3){
+        $x = rand(-10,10);
+        if($i < 0){
+        sphere;
+        }else{
+        sphere -ssw 0 -esw -180;                    
+        }
+        move  0 ($i*40+$x) ($j*30);
+        scale ($i+30) ($i+30) ($i+30);
+        rotate 0 ($i*9) 0;
+        rotate -p 0 0 0  0 ($j*7) 0;
+    }
+}
+
+for($i=-20; $i<20; $i=$i+2){
+    for($j=-10; $j<10; $j=$j+3){
+        $x = rand(-10,10);
+        
+        move  0 ($i*40+$x) ($j*30);
+        rotate -p 0 0 0  0 ($j*7) 0;
+    }
+}
+
+
+string $obj = "nurbsSphere75";
+float $pos[] = `xform -q -ws -t ($obj + ".cv[1]")`;
+
+
+
+string $objB = "nurbsSphere75";
+float $posB[] = `pointPosition ($objB + ".cv[0]")`;
+
+
+string $objC = "nurbsSphere68";
+float $posC[] = `objectCenter -gl $objC`;
+sphere;
+move $posC[0] $posC[1] $posC[2];
+//$test = pointPosition nurbsSphere69.cv[1];
+//print($test);
+//print val(getAttr())
+
+```
