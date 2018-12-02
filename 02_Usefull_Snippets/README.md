@@ -231,3 +231,29 @@ print($p[0]); //get the first element (i.e. x-coord)
 setAttr MyCube.vtx[3] .2 .4 0;
 ```
 ![vtx](assets/vtx.png)
+
+
+
+## Circle
+
+![circle](assets/circle.png)
+
+```
+for ($i = 0; $i < 100; $i++ ) {
+// Sin X
+$ampX = 10;
+$perX = $i*20;
+$sinFuncX = ($ampX * sin(deg_to_rad($perX)));
+
+// Sin Y
+$ampY = 10;
+$perY = $i*20;
+$sinFuncY = ($ampY * cos(deg_to_rad($perY))); 
+
+
+polyCube -n ("$Cube_" + $i);
+$varS = ($sinFuncX/40) - 1;
+scale 1 1 1;
+move ($sinFuncX) $sinFuncY (1) ; 
+} 
+```
