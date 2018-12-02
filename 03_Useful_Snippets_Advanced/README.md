@@ -2,6 +2,9 @@
 # Useful Snippets 2.0
 
 
+
+
+
 ## Number Patterns
 
 Examples
@@ -95,4 +98,32 @@ for($i=0; $i<10; $i++){
 int $indx = rand(9);
 
 eval("getAttr MyCube" + $indx + ".translateX");
+```
+
+## Greate Random Objects 
+generate random objects by using a Function. If you want to add an Attribute (Variable) to the function – use the ```string $text``` input.
+
+![](assets/grid.png)
+
+```
+string $some_text="hello world";
+eval( "createObjects($some_text);" );
+
+proc createObjects(string $text) {
+        string $commands[] = { "polyCone", "polyCube", "polySphere", "polyTorus" };
+        print($text);
+
+        for( $i=-10; $i<=10; $i+=2 ) {
+                for( $j=-10; $j<=10; $j+=2 ) {        
+                        // generate a random number to use as an index into the commands array
+                        int $index = `rand 4`;
+                                
+                        // call eval to execute the command
+                        eval($commands[$index]);
+                        
+                        // move the object
+                        xform -t $i 0 $j;
+                }
+        }
+}
 ```
