@@ -41,3 +41,17 @@ class ButtonWin(object):
    def report(self,buttonIndex,value):
       print "button %d got %s"%(buttonIndex,value)
 f = ButtonWin()
+
+
+
+
+## Extrude Faces
+
+import maya.cmds as cmds
+
+for i in range(1,7):
+	hsbcBuilding = cmds.polyCube(h=9,n="HSBC")
+	cmds.move((i*10 )/2.0, 0,0,hsbcBuilding)
+	cmds.polyExtrudeFacet( hsbcBuilding[0] +".f[2]", ltz = 0.9, ls=( .5, .5, 0)	)
+	
+![extrude](assets/extrude.png)
