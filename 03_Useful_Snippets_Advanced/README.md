@@ -215,7 +215,7 @@ makeIsosTriangleC();
 ```
 
 
-## Twist & open 
+## Open shapes
 Used seed() to define the seed of random. 
 
 ![seed](assets/seed.png)
@@ -265,4 +265,38 @@ move $posC[0] $posC[1] $posC[2];
 //print($test);
 //print val(getAttr())
 
+```
+
+
+## Wave circles
+
+![wavecircles](assets/wavecircles.gif)
+
+```
+for ($i = 1; $i <= 100; $i++) {
+  $amp = 1;
+  $per = sin(deg_to_rad($i*10));
+  $sinFunc = ($amp * $per);
+
+polyTorus -r (0.1 * $i) -sr 0.01;
+//scale -r 1 1 1;
+move 0 $sinFunc 0;
+//rotate ($sinFunc*$i) 0 0;
+}
+```
+
+### Chaos
+
+![chaos](assets/chaos.gif)
+
+```
+for ($i = 1; $i <= 100; $i++) {
+  $amp = 1;
+  $per = sin(deg_to_rad($i*10));
+  $sinFunc = ($amp * $per);
+
+polyTorus -r (0.1 * $i) -sr 0.01;
+move 0 $sinFunc 0;
+rotate ($sinFunc*$i) 0 0;
+}
 ```
