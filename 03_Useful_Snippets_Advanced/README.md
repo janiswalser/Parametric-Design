@@ -345,3 +345,28 @@ for ($i = 0; $i < 400; $i++ ) {
     move ($sinFuncX * (($i)/40)) ($sinFuncY*(($i)/40)) ($sinFuncZ) ;
 } 
 ```
+
+## Word generator
+```
+//CREATE WORDS
+
+$vow = "aeiou";
+$con = "bcdfghjklmnpqrstvwxyz";
+
+$s = "";
+
+for($i = 0; $i < 6; $i++) {
+	$rv = int(rand(0,5));
+	$rc = int(rand(0,size($con)));
+	
+	$subv = substring ($vow, $rv, $rv);
+	$subc = substring ($con, $rc, $rc);
+	if(($i%2)==0)
+	$s = $s + $subc;
+	else
+	$s = $s + $subv;
+
+	
+}
+print $s
+```
