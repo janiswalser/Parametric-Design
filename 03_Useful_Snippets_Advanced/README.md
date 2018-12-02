@@ -177,3 +177,39 @@ for ($t = 1; $t < 80; $t++) {
 }
 eval("loft " + $allCircles);
 ```
+
+## Triangle Pattern
+This snippet creates a Grid of triangles with a row of triangles rotated every second time.
+
+![row of triangles](assets/triangles.png)
+
+```
+proc makeIsosTriangleC() {
+for ($i = 0; $i < 10; $i++) {
+
+    for ($t = 0; $t < 10; $t++) {
+
+        string $tmp[] = `polyPlane -w 1 -h 1 -sx 1 -sy 1 -ch 0`;
+        $tmp = `listRelatives -c -type "shape" $tmp[0]`;
+        string $planeShape = $tmp[0];
+        eval("polyMergeVertex -am 1 -ch 0 "+$planeShape+".vtx[2] "+$planeShape+".vtx[3]");
+        move ($t * 1.2) 0 ($i/2);
+        print ($i + "\n"); 
+        select $planeShape; 
+
+
+
+        if ($i % 2 == 0) {
+            rotate 0 180 0;
+            move -r -0.6 0 (.3);
+
+        }  
+        //print ("pPlane" + ($i+1));
+        //print ("pPlane" + ($t+1));
+
+     }
+}
+
+}
+makeIsosTriangleC();
+```
