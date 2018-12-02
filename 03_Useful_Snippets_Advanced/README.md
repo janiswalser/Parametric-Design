@@ -152,3 +152,28 @@ for ($t = 1; $t < 80; $t++) {
 }
 eval("loft " + $allCircles);
 ```
+
+
+## open lofted shape
+
+![openloft](assets/openloft.png)
+
+
+```
+string $allCircles = "";
+for ($t = 1; $t < 80; $t++) {
+        $ang = rand(45,360); 
+        $rad = rand(2.2,3.8);
+        circle -nr 0 0 0 -c 0 0 0 -sw 180 -r $rad;
+        move 0 0 ($t * -1.5); 
+        //rotate -z 120;
+        //select -r ("nurbsCircle" + $t + ".cv[0]");
+        select -r ("nurbsCircle" + $t + ".cv[" + (rand(0,2)) + "]");
+        move -r 0 (rand(2,1)) 0 ;   
+        
+        // create string with all names
+        $allCircles = $allCircles + (" nurbsCircle" + $t);
+
+}
+eval("loft " + $allCircles);
+```
