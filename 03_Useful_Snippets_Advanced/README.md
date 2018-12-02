@@ -127,3 +127,28 @@ proc createObjects(string $text) {
         }
 }
 ```
+
+
+## LOFT
+
+This command computes a skinned (lofted) surface passing through a number of NURBS curves.
+
+![loft](assets/loft.png)
+
+``` 
+string $allCircles = "";
+for ($t = 1; $t < 80; $t++) {
+        $ang = rand(45,360); 
+        $rad = rand(0.2,3.8);
+        $siz = rand(2,0.2);
+        circle -nr 0 0 0 -c 0 0 0 -sw 360 -r $rad;
+        move 0 0 ($t * -0.5); 
+
+        select -r ("nurbsCircle" + $t + ".cv[" + (rand(0,2)) + "]");
+        move -r 0 (rand(2,0.2)) 0 ;   
+        
+        $allCircles = $allCircles + (" nurbsCircle" + $t);
+
+}
+eval("loft " + $allCircles);
+```
