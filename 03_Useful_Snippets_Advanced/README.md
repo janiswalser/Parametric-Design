@@ -300,3 +300,20 @@ move 0 $sinFunc 0;
 rotate ($sinFunc*$i) 0 0;
 }
 ```
+## Closed – play with sine
+
+![playsine](assets/playsine.png)
+```
+for ($i = 1; $i <= 100; $i++ ) {
+        
+        $amp = 40;
+          $per = sin(deg_to_rad($i*20));
+         $sinFunc = ($amp * $per);
+
+        
+        polyCube -n ("Cube_" + $i);
+        rotate -pivot 0 0 10 $sinFunc (($i * 10) + "deg") 0;
+        // rotate the cube 180 degrees about its local space Y axis
+        // centered at the rotate pivot point 1 0 0.
+}
+```
