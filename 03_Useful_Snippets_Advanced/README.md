@@ -317,3 +317,31 @@ for ($i = 1; $i <= 100; $i++ ) {
         // centered at the rotate pivot point 1 0 0.
 }
 ```
+
+## Sine in every axis
+
+![sinaxis](assets/sineaxis.png)
+
+```
+for ($i = 0; $i < 400; $i++ ) {
+    // Sin X
+    $ampX = 2;
+    $perX = $i*10;
+    $sinFuncX = ($ampX * sin(deg_to_rad($perX)));
+    
+    // Cos Y
+    $ampY = 2;
+    $perY = $i*10;
+    $sinFuncY = ($ampY * cos(deg_to_rad($perY))); 
+    
+    // Sin Z
+    $ampZ = 2;
+    $perZ = $i*40;
+    $sinFuncZ = ($ampZ * sin(deg_to_rad($perZ))); 
+    
+    $varS = ($i*0.002 + 0.1);
+    sphere -n ("$Sphere" + $i);
+    scale  $varS $varS $varS;
+    move ($sinFuncX * (($i)/40)) ($sinFuncY*(($i)/40)) ($sinFuncZ) ;
+} 
+```
