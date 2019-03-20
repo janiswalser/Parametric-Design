@@ -67,6 +67,9 @@ scriptToShelf  ("MyFirst", "select -all", true);
 
 
 
+---
+Useful Links 
+  * [Maya tutorial – bournemouth](https://nccastaff.bournemouth.ac.uk/jmacey/RobTheBloke/www/maya/)
 
 
 
