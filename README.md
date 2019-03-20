@@ -8,7 +8,7 @@ Are you ever curious to dive into programming in Maya? Are looking to take your 
 Inspired by [Kostas Terzidis](https://github.com/imkostas?tab=repositories) class „Parametric Design“ and some projects & experience I did before at the [HfG Schwäbisch Gmünd](https://www.hfg-gmuend.de/) I started this Repository to share my experience and Insights.  
 Here I will provide you with some Basics to start so you can get familiar with scripting in Maya. In addition I try to provide more and more code snippets in MEL & Python – stay tuned!
 
-I can't vouch that all of this information is 100% correct. !! use it at your own risk !! If anyone spots any errors, then please do let me know....
+
 
 
 
