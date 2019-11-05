@@ -1,7 +1,7 @@
 ![](assets/curves.png)
 
 ![](assets/pattern.png)
-![](assets/nums.png)
+
 
 # Curves & Patterns
 Generative created curves with ```%```
